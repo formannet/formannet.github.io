@@ -15,3 +15,8 @@ Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
 sudo apt update
+
+apt-get install -y docker-ce docker-ce-cli containerd.io
+
+sudo usermod -a -G docker `whoami`
+sudo usermod -a -G docker jforman
